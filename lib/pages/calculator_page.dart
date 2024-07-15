@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:gpa_calculator/pages/about_us_page.dart';
 import 'package:gpa_calculator/utils/button_collection.dart';
 import 'package:gpa_calculator/utils/grade_form.dart';
 
@@ -114,37 +115,36 @@ class _CalculatorPageState extends State<CalculatorPage> {
             )),
         drawer: Drawer(
           child: ListView(
-            // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
+            children: <Widget>[
+              DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.lightGreen,
+                  color: Colors.lightGreen[800],
                 ),
-                child: Text('GPA Calculator',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold)),
+                child: Text(
+                  'Navigation',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
+                ),
               ),
               ListTile(
                 leading: Icon(Icons.home),
-                title: const Text('Calculate GPA'),
-                selected: _selectedIndex == 0,
+                title: Text('Home'),
                 onTap: () {
-                  // Update the state of the app.
-                  _onItemTapped(0);
-                  Navigator.pop(context);
+                  Navigator.pop(context); // Close the drawer
                 },
               ),
               ListTile(
                 leading: Icon(Icons.info),
-                title: const Text('About'),
-                selected: _selectedIndex == 1,
+                title: Text('About Us'),
                 onTap: () {
-                  // Update the state of the app.
-                  _onItemTapped(1);
-                  Navigator.pop(context);
+                  Navigator.pop(context); // Close the drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AboutUsPage()),
+                  );
                 },
               ),
             ],
