@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class GradeForm extends StatelessWidget {
   final int rows;
-  List<TextEditingController> courseControllers;
-  List<TextEditingController> gradeControllers;
-  List<TextEditingController> creditControllers;
+  final List<TextEditingController> courseControllers;
+  final List<TextEditingController> gradeControllers;
+  final List<TextEditingController> creditControllers;
 
   GradeForm(
       {super.key,

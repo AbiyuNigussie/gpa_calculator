@@ -2,15 +2,9 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:device_preview/device_preview.dart';
-import 'package:gpa_calculator/pages/calculator_page.dart';
+import 'package:CalcMyGpa/pages/calculator_page.dart';
 
-void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => MainApp(), // Wrap your app
-      ),
-    );
+void main() => runApp(MainApp());
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -19,6 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "CalcMyGpa",
       home: CalculatorPage(),
     );
   }

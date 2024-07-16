@@ -4,9 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ButtonCollection extends StatelessWidget {
-  VoidCallback onAdd;
-  VoidCallback onReset;
-  VoidCallback onCalculate;
+  final VoidCallback onAdd;
+  final VoidCallback onReset;
+  final VoidCallback onCalculate;
 
   ButtonCollection(
       {super.key,

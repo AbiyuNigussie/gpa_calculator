@@ -84,6 +84,31 @@ class AboutUsPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
+                "How to Use",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightGreen[800],
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "1. Open the app and you will see the GPA Calculator home screen.\n"
+                "2. Enter the name of your course in the 'Course' field.\n"
+                "3. Enter your grade for the course in the 'Grade' field (eg. A+, A, A-, B+, B, B-, C+, C, C-, D, F).\n"
+                "4. Enter the number of credits for the course in the 'Credits' field.\n"
+                "5. Click the 'Add' button to add the course to the list.\n"
+                "6. Repeat steps 2-5 for all your courses.\n"
+                "7. Click the 'Calculate' button to see your GPA.\n"
+                "8. If you need to start over, click the 'Reset' button to clear all fields.",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey[800],
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 20),
+              Text(
                 "Contact Information",
                 style: TextStyle(
                   fontSize: 22,

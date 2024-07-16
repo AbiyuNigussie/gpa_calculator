@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:gpa_calculator/pages/about_us_page.dart';
-import 'package:gpa_calculator/utils/button_collection.dart';
-import 'package:gpa_calculator/utils/grade_form.dart';
+import 'package:CalcMyGpa/pages/about_us_page.dart';
+import 'package:CalcMyGpa/utils/button_collection.dart';
+import 'package:CalcMyGpa/utils/grade_form.dart';
 
 class CalculatorPage extends StatefulWidget {
   CalculatorPage({super.key});
@@ -84,14 +84,6 @@ class _CalculatorPageState extends State<CalculatorPage> {
     print(calculatedGPA);
   }
 
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
@@ -122,7 +114,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                   color: Colors.lightGreen[800],
                 ),
                 child: Text(
-                  'Navigation',
+                  '',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
